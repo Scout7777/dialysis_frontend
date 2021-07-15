@@ -26,7 +26,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '13'
-      - run: npm install && HISTSYS_ENV=dev npm run-script build
+      - run: export HISTSYS_ENV=dev && npm install && npm run-script build
 
       - name: Setup Dir
         uses: appleboy/ssh-action@master

@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '13'
-      - run: npm install && HISTSYS_ENV=prod npm run-script build
+      - run: export HISTSYS_ENV=prod && npm install && npm run-script build
 
   deploy:
     needs: [build]
